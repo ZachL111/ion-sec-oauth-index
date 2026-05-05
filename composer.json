@@ -1,0 +1,10 @@
+{
+  "name": "zachl111/ion-sec-oauth-index",
+  "description": "Implement a PHP security tooling project for oauth security rule linting, using safe and unsafe fixtures and remediation hints.",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Portfolio\\": "src/"
+    }
+  }
+}
