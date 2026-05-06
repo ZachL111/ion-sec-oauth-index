@@ -1,0 +1,73 @@
+{
+  "repo": "ion-sec-oauth-index",
+  "language": "PHP",
+  "category": "Security tooling",
+  "goal": "Implement a PHP security tooling project for oauth security rule linting, using safe and unsafe fixtures and remediation hints.",
+  "review_model": {
+    "terms": [
+      "trust boundary",
+      "claim drift",
+      "replay exposure",
+      "policy width"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "trust boundary",
+      "signal": 56,
+      "slack": 32,
+      "drag": 10,
+      "confidence": 62,
+      "score": 176,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "claim drift",
+      "signal": 55,
+      "slack": 53,
+      "drag": 17,
+      "confidence": 86,
+      "score": 198,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "replay exposure",
+      "signal": 62,
+      "slack": 35,
+      "drag": 18,
+      "confidence": 55,
+      "score": 160,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "policy width",
+      "signal": 71,
+      "slack": 36,
+      "drag": 19,
+      "confidence": 85,
+      "score": 206,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "trust boundary",
+      "signal": 80,
+      "slack": 34,
+      "drag": 20,
+      "confidence": 67,
+      "score": 201,
+      "lane": "ship"
+    }
+  ]
+}
